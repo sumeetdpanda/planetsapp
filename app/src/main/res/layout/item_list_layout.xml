@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/planetImg"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_margin="16dp"
@@ -17,22 +17,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/planet_name"
+        android:id="@+id/planetName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Planet Name"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/planetImg"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/moonCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="0 Moon"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/planet_name" />
+        app:layout_constraintStart_toEndOf="@+id/planetImg"
+        app:layout_constraintTop_toBottomOf="@+id/planetName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
