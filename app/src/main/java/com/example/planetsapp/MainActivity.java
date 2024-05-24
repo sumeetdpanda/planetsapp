@@ -1,7 +1,10 @@
 package com.example.planetsapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,5 +58,15 @@ public class MainActivity extends AppCompatActivity {
         adapter = new PlanetAdapter(getApplicationContext(), planetsArrayList);
 
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(
+                        MainActivity.this,
+                        "Planet Name: " + adapter.getItem(position).getPlanetName(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
